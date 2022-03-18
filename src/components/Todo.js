@@ -14,10 +14,8 @@ function Todo() {
   } else {
     list = JSON.parse(localStorage.getItem("list"));
   }
-  // console.log("list 1", list);
 
   const [anotherList, setAnotherList] = useState(list);
-  // console.log("anotherList", anotherList);
 
   const [listItem, setListItem] = useState({
     id: "",
@@ -132,8 +130,6 @@ function Todo() {
               setTodoContent={setTodoContent}
               anotherList={anotherList}
               setAnotherList={setAnotherList}
-              // newList={newList}
-              // setNewList={setNewList}
             />
           )}
         </div>
