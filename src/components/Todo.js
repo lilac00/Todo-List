@@ -97,6 +97,7 @@ function Todo() {
                         }
                       : ""
                   }
+                  disabled={isLoading ? true : ""}
                 ></input>
                 <button
                   className="add-new-btn"
