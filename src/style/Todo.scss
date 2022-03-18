@@ -1,0 +1,100 @@
+@import "./Variables.scss";
+
+.container {
+  background: $white;
+  border: 5px solid $black;
+  width: 600px;
+  margin: auto;
+  // padding: 5px 40px 20px 40px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+// 標題
+.title-box {
+  // background: $red;
+  padding: 20px 40px;
+  border-bottom: 2.5px solid $black;
+}
+.title {
+  text-align: center;
+  margin: 0;
+}
+
+// 新增
+.add-new-box {
+  background: $white;
+  padding: 20px 40px;
+  border-top: 2.5px solid $black;
+  border-bottom: 2.5px solid $black;
+}
+.add-new {
+  width: fit-content;
+  margin: auto;
+}
+.error-message {
+  color: $red;
+}
+
+// Tabs
+.finished-or-not {
+  display: flex;
+}
+.unfinished-btn {
+  width: 50%;
+  // background: $yellow;
+  border-top: 2.5px solid $black;
+  border-bottom: 2.5px solid $black;
+  border-right: 2.5px solid $black;
+  padding: 15px 20px;
+}
+.finished-btn {
+  width: 50%;
+  // background: $blue;
+  border-top: 2.5px solid $black;
+  border-bottom: 2.5px solid $black;
+  border-left: 2.5px solid $black;
+  padding: 15px 20px;
+}
+.unfinished-btn h2,
+.finished-btn h2 {
+  margin: 0;
+}
+
+// 待完成
+.unfinished-list-box {
+  // background: $yellow;
+  border-top: 2.5px solid $black;
+  padding: 10px 20px;
+}
+.unfinished-list-content {
+  padding: 15px;
+  box-sizing: border-box;
+  background: $white;
+  border: 3px solid $black;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.unfinished-list-content-single {
+  display: flex;
+}
+
+// 已完成
+.finished-list-box {
+  background: $blue;
+  border-top: 2.5px solid $black;
+  padding: 10px 20px;
+}
+.finished-list-content {
+  padding: 15px;
+  box-sizing: border-box;
+  background: $white;
+  border: 3px solid $black;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.finished-list-content-single {
+  display: flex;
+}
