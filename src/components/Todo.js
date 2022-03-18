@@ -63,6 +63,7 @@ function Todo() {
     setTodoContent(list.filter((v, i) => v.finished === false));
     let listString = JSON.stringify(list);
     localStorage.setItem("list", listString);
+    setListItem({ ...listItem, content: "" });
   }
 
   // 切換待完成頁和已完成頁
@@ -83,9 +84,11 @@ function Todo() {
           <div className="add-new-box">
             <div className="add-new">
               <div className="add-new-title">新增事項</div>
-              <form>
+              <form className="add-new-form">
                 <input
+                  className="new-input"
                   name="content"
+                  value={listItem.content}
                   onChange={handleChange}
                   onKeyPress={
                     isLoading
@@ -95,7 +98,11 @@ function Todo() {
                       : ""
                   }
                 ></input>
-                <button onClick={handleSubmit} disabled={isLoading ? true : ""}>
+                <button
+                  className="add-new-btn"
+                  onClick={handleSubmit}
+                  disabled={isLoading ? true : ""}
+                >
                   {isLoading ? "Loading..." : "送出"}
                 </button>
               </form>

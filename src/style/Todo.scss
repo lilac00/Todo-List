@@ -12,7 +12,7 @@
 
 // 標題
 .title-box {
-  // background: $red;
+  background: $red;
   padding: 20px 40px;
   border-bottom: 2.5px solid $black;
 }
@@ -32,6 +32,21 @@
   width: fit-content;
   margin: auto;
 }
+.add-new-form {
+  display: flex;
+  align-items: center;
+}
+.new-input {
+  height: 22px;
+  border: 3px solid $black;
+}
+.add-new-btn {
+  height: 30px;
+  width: 80px;
+  background: $white;
+  border: 3px solid $black;
+  margin-left: 10px;
+}
 .error-message {
   color: $red;
 }
@@ -42,7 +57,7 @@
 }
 .unfinished-btn {
   width: 50%;
-  // background: $yellow;
+  background: $yellow;
   border-top: 2.5px solid $black;
   border-bottom: 2.5px solid $black;
   border-right: 2.5px solid $black;
@@ -50,7 +65,7 @@
 }
 .finished-btn {
   width: 50%;
-  // background: $blue;
+  background: $blue;
   border-top: 2.5px solid $black;
   border-bottom: 2.5px solid $black;
   border-left: 2.5px solid $black;
@@ -63,7 +78,7 @@
 
 // 待完成
 .unfinished-list-box {
-  // background: $yellow;
+  background: $yellow;
   border-top: 2.5px solid $black;
   padding: 10px 20px;
 }
@@ -73,11 +88,60 @@
   background: $white;
   border: 3px solid $black;
   margin: 20px 0;
-  display: flex;
-  justify-content: space-between;
+  height: 66px;
+  animation-name: show-bar;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes show-bar {
+  0% {
+    width: 0%;
+  }
+  95% {
+    width: 103%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 .unfinished-list-content-single {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.unfinished-main-content {
+  animation-name: pop-out;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes pop-out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.remove-finish-btn button {
+  height: 30px;
+  width: 60px;
+  background: $white;
+  border: 3px solid $black;
+  margin-left: 10px;
+  animation-name: pop-out;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.remove-btn {
+  animation-delay: 0.6s;
+}
+.finish-btn {
+  animation-delay: 0.7s;
 }
 
 // 已完成
@@ -92,9 +156,28 @@
   background: $white;
   border: 3px solid $black;
   margin: 20px 0;
-  display: flex;
-  justify-content: space-between;
+  height: 57px;
+  animation-name: show-bar;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
 }
 .finished-list-content-single {
   display: flex;
+  justify-content: space-between;
+}
+.finished-main-content {
+  animation-name: pop-out;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.finished-time {
+  animation-name: pop-out;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }

@@ -48,12 +48,20 @@ function Unfinished(props) {
                     type="radio"
                     onClick={() => handleFinished(todoContent.id)}
                   /> */}
-                  <div>{todoContent.content}</div>
+                  <div className="unfinished-main-content">
+                    {todoContent.content}
+                  </div>
                   <div className="remove-finish-btn">
-                    <button onClick={() => handleRemove(todoContent.id)}>
+                    <button
+                      className="remove-btn"
+                      onClick={() => handleRemove(todoContent.id)}
+                    >
                       刪除
                     </button>
-                    <button onClick={() => handleFinished(todoContent.id)}>
+                    <button
+                      className="finish-btn"
+                      onClick={() => handleFinished(todoContent.id)}
+                    >
                       完成
                     </button>
                   </div>

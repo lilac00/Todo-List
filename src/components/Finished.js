@@ -13,8 +13,12 @@ function Finished(props) {
             <>
               <div className="finished-list-content">
                 <div className="finished-list-content-single">
-                  <div>{todoContent.content}</div>
-                  <div>{todoContent.finishedTime}</div>
+                  <div className="finished-main-content">
+                    {todoContent.content}
+                  </div>
+                  <div className="finished-time">
+                    {todoContent.finishedTime}
+                  </div>
                 </div>
               </div>
             </>
