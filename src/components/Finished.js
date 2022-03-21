@@ -10,7 +10,7 @@ function Finished(props) {
       <div className="finished-list-box">
         {finishedContent.map((todoContent, index) => {
           return (
-            <>
+            <React.Fragment key={todoContent.id}>
               <div className="finished-list-content">
                 <div className="finished-list-content-single">
                   <div className="finished-main-content">
@@ -21,7 +21,7 @@ function Finished(props) {
                   </div>
                 </div>
               </div>
-            </>
+            </React.Fragment>
           );
         })}
       </div>

@@ -29,7 +29,6 @@ function Todo() {
   const [tab, setTab] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [inputError, setInputError] = useState();
-  console.log("inputError", inputError);
 
   // 新增事項
   let addTime;
@@ -40,19 +39,15 @@ function Todo() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log("listItem.id", listItem.id);
     if (listItem.content === "") {
-      console.log("請輸入文字");
       setInputError(true);
       return;
     }
     setInputError(false);
     setIsLoading(true);
-    console.log("isLoading 1", isLoading);
     await new Promise((resolve) => {
       setTimeout(function () {
         setIsLoading(false);
-        console.log("isLoading 2", isLoading);
         resolve();
       }, 1300);
     });
@@ -93,7 +88,7 @@ function Todo() {
                       ? (e) => {
                           e.key === "Enter" && e.preventDefault();
                         }
-                      : ""
+                      : null
                   }
                   disabled={isLoading ? true : ""}
                 ></input>

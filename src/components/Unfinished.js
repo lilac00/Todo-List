@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import moment from "moment";
 
 function Unfinished(props) {
   // 刪除
   function handleRemove(todoId) {
     const removeResult = props.anotherList.filter((v, i) => v.id !== todoId);
-    console.log("removeResult", removeResult);
     let newlist = removeResult;
     props.setAnotherList(newlist);
     props.setTodoContent(newlist.filter((v, i) => v.finished === false));
@@ -36,7 +35,7 @@ function Unfinished(props) {
       <div className="unfinished-list-box">
         {props.todoContent.map((todoContent, index) => {
           return (
-            <>
+            <React.Fragment key={todoContent.id}>
               <div className="unfinished-list-content">
                 <div className="unfinished-list-content-single">
                   <div className="unfinished-main-content">
@@ -58,7 +57,7 @@ function Unfinished(props) {
                   </div>
                 </div>
               </div>
-            </>
+            </React.Fragment>
           );
         })}
       </div>
